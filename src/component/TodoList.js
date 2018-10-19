@@ -24,7 +24,7 @@ export default class TodoList extends Component {
     handleKeyUp(event) {
         if (event.key === 'Enter' && this.state.todoText.trim()) {
             let { todoList } = this.state
-            todoList.push({
+            todoList.unshift({
                 id: this.generateGUID(),
                 content: this.state.todoText.trim(),
                 completed: false
